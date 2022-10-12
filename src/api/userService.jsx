@@ -8,6 +8,14 @@ const login = (data) => {
   const register = (data) => {
     return http.post("/register", data);
   };
-  export {login, register};
+
+  const update = (data) => {
+    return http.post("/register", data);
+  };
+
+  const getUser = (data) => {
+    return http.post("/register", data);
+  };
+  export {login, register, update, getUser};
 
   

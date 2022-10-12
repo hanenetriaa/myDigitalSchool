@@ -1,0 +1,48 @@
+.nav{
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.nav-link {
+   color: white;
+    size: 18px;
+    text-decoration: none; 
+    margin-left: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+    background-color: black;
+}
+
+.logo{
+    width: 100px;
+
+}
+
+.section-body{
+    min-height: 100vh;
+}
+
+.profile-body{
+    margin:20px;
+    height:100vh
+}
+
+.home-title {
+    background-image: url('https://www.mydigitalschool.com/sites/default/files/styles/accueil_slideshow/public/2022-02/MBA%20EDUNIVERSAL%20%281%29.jpg.webp?itok=ha-IlGZJ');
+    background-size: cover;
+    height:30vh;
+}
+
+.formations{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #2db7c4;
+    color: white;
+}

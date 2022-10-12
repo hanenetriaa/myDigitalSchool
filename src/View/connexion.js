@@ -45,7 +45,7 @@ const Connexion = () => {
   };
   return (
         
-    <div className="body">
+    <div className="section-body">
     <h1>Connectez-vous</h1>
     <form onSubmit={handleSubmit}>
         <label htmlFor='email'>

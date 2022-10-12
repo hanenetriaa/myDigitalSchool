@@ -51,7 +51,7 @@ const Register = () => {
     };
     return (
         
-        <div>
+        <div className='section-body'>
         <h1>Inscrivez-vous</h1>
         <form onSubmit={onSubmitHandler}>
         <label htmlFor='nom'>
