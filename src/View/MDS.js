@@ -10,11 +10,11 @@ function MDS() {
 MyDigitalSchool est une école web ouverte à toutes et à tous, aux initiés comme aux débutants. Notre objectif est d’ouvrir le monde du digital à tous les talents et tous les profils.</p>
       </section>
 
-      <section> 
-        <h1> Nos différentes formations</h1>
-        <section className="formations">
+      <section className="bg-blue"> 
+        <h1 className="title-formations"> Nos différentes formations</h1>
+        <section className="formations ">
           <section>
-            <h1> Nos Bac+3 </h1>
+            <h1 > Nos Bac+3 </h1>
             <ul>
               <li>Bachelor création numérique</li>
               <li>Bachelor développement web</li>
@@ -35,8 +35,28 @@ MyDigitalSchool est une école web ouverte à toutes et à tous, aux initiés co
           </section>
 
         </section>
+ </section>
+        <section className="formations">
+          <section className="box un">
+            <h1>13</h1>
+            <p>certifications professionelles</p>
+          </section>
+          <section className="box deux">
+            <h1>19</h1>
+            <p>labels et accrédiatations</p>
+          </section>
+          <section className="box trois">
+            <h1>95%</h1>
+            <p>taux de réussite</p>
+          </section>
+          <section className="box quatre">
+            <h1>800</h1>
+            <p>entreprises partenaires</p>
+          </section>
 
-      </section>
+        </section>
+
+     
         </div>
     );
   }

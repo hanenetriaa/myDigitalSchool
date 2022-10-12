@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 .nav{
     
     display: flex;
@@ -37,12 +42,47 @@
 .home-title {
     background-image: url('https://www.mydigitalschool.com/sites/default/files/styles/accueil_slideshow/public/2022-02/MBA%20EDUNIVERSAL%20%281%29.jpg.webp?itok=ha-IlGZJ');
     background-size: cover;
-    height:30vh;
+    height:40vh;
+    padding-top:50px;
 }
 
+.bg-blue{
+background-color: #2db7c4;
+}
 .formations{
     display:flex;
     justify-content: space-evenly;
-    background-color: #2db7c4;
     color: white;
+    padding-bottom:40px;
+    
+}
+
+.title-formations{
+    padding-top:40px;
+}
+
+/* box avec les chiffres clés */
+
+.un{
+    background-color:#24929C;
+}
+
+.deux{
+    background-color:#1F7F89 ;
+}
+
+.trois{
+    background-color:#24929C ;
+}
+
+.quatre{
+    background-color: #1B6E75; 
+}
+
+.box{
+    width:25%;
+    height: 200px;
+    display: flexbox;
+    padding-top:75px;
+   
 }
