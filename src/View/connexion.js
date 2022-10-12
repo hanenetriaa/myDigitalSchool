@@ -57,8 +57,9 @@ const Connexion = () => {
             <div>Mon mot de passe</div>
             <input type="password" id="password" name="password" onChange={OnchangeHandler}  placeholder="Password" required/>
         </label>
+        <button type ="submit">Connexion</button>
     </form>
- <button type ="submit">Connexion</button>
+ 
  {/* { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } */}
       
     </div>
