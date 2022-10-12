@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import {useState} from 'react';
 import Swal from "sweetalert2";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Redirect, Link } from 'react-router-dom';
 import {login} from '../api/userService';
 
 const Connexion = () => {
@@ -38,6 +38,7 @@ const Connexion = () => {
             console.log(err);
           });
         Swal.fire("Login!", "", "success");
+        <Redirect to="/home" />
       } else if (result.isDenied) {
         Swal.fire("Changes are not saved", "", "info");
       }
@@ -59,7 +60,7 @@ const Connexion = () => {
         <button type ="submit">Connexion</button>
     </form>
  
- {/* { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } */}
+ { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } }
       
     </div>
     
