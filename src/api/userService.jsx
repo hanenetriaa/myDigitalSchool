@@ -9,13 +9,10 @@ const login = (data) => {
     return http.post("/register", data);
   };
 
-  const update = (data) => {
-    return http.post("/register", data);
+  
+  const getProfile = (id) => {
+    return http.get(`/getProfile/${id}`);
   };
-
-  const getUser = (data) => {
-    return http.post("/register", data);
-  };
-  export {login, register, update, getUser};
+  export {login, register, getProfile};
 
   
