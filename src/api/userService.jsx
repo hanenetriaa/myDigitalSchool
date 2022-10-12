@@ -10,7 +10,7 @@ const login = (data) => {
   };
 
   
-  const getProfile = (id) => {
+  const getProfileById = (id) => {
     return http.get(`/getProfile/${id}`);
   };
 
@@ -19,6 +19,6 @@ const login = (data) => {
   };
   
 
-  export {login, register, getProfile, logout};
+  export {login, register, getProfileById, logout};
 
   

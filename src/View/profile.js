@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {getProfile} from "../api/userService";
+import {getProfileById} from "../api/userService";
 
 const Profile = () => {;
  
@@ -14,7 +14,7 @@ const Profile = () => {;
   const navigate = useNavigate();
   const { id } = useParams();
   const getProfile = () => {
-    getProfile(id)
+    getProfileById(id)
       .then((res) => {
         console.log(res);
         SetNom(res.data.data.nom);
