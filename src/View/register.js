@@ -51,33 +51,39 @@ const Register = () => {
     };
     return (
         
-        <div className='section-body'>
-        <h1>Inscrivez-vous</h1>
-        <form onSubmit={onSubmitHandler}>
-        <label htmlFor='nom'>
+        <div className='section-body bg-blue'>
+        <h1 className='title-formations deux'>Inscrivez-vous</h1>
+        
+        <form onSubmit={onSubmitHandler} className="form">
+        <section className='img-register'></section>
+        <section className='form-input'>
+        <label htmlFor='nom' className='form-input'>
                 <div>Mon Nom</div>
                 <input type="nom" id="nom" name="nom" autoComplete="off" onChange={OnchangeHandler}  placeholder="Marie" required/>
             </label>
-            <label htmlFor='prenom'>
+            <label htmlFor='prenom' className='form-input'>
                 <div>Mon Prénom</div>
                 <input type="prenom" id="prenom" name="prenom" autoComplete="off" onChange={OnchangeHandler}  placeholder="Espinosa" required/>
             </label>
-            <label htmlFor='email'>
+            <label htmlFor='email' className='form-input'>
                 <div>Mon mail</div>
                 <input type="email" id="email" name="email" autoComplete="off" onChange={OnchangeHandler}  placeholder="marie.espinosa@gmail.com" required/>
             </label>
-            <label htmlFor='password' id="password">
+            <label htmlFor='password' id="password" className='form-input'>
                 <div>Mon mot de passe</div>
                 <input type="password" id="password" name="password" onChange={OnchangeHandler}  placeholder="Password" required/>
             </label>
-            <label htmlFor='tel'>
+            <label htmlFor='tel' className='form-input'>
                 <div>Mon numéro de téléphone</div>
                 <input type="tel" id="tel" name="tel" autoComplete="off" onChange={OnchangeHandler}  placeholder="numéro de téléphone" required/>
-            </label>
-            <button type ="submit">Connexion</button>
+            </label><br/>
+            <button type ="submit">Inscription</button><br/>
+            <div>  <Link to={`/`}>déja inscrit ? connectez-vous  </Link></div> 
+            </section>
+            
         </form>
      
-     <div>  <Link to={`/`}>déja inscrit ? connectez-vous  </Link></div> 
+     
           
         </div>
         
