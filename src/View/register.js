@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import {useState} from 'react';
 import Swal from "sweetalert2";
-
+import { BrowserRouter as Router, Link } from "react-router-dom";
 // import { Form } from 'react-router-dom';
 import {register} from '../api/userService';
 
@@ -77,7 +77,7 @@ const Register = () => {
             <button type ="submit">Connexion</button>
         </form>
      
-     {/* { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } */}
+     <div>  <Link to={`/register`}>Pas déja inscrit ? Inscrivez-vous  </Link></div> 
           
         </div>
         
