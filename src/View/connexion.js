@@ -3,7 +3,7 @@ import './style.css';
 import {useState} from 'react';
 import Swal from "sweetalert2";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import userService from '../api/userService';
+import {login} from '../api/userService';
 
 const Connexion = () => {
   const [Data, SetData] = useState({});
@@ -25,8 +25,7 @@ const Connexion = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        userService
-          .login(Data)
+        login(Data)
           .then((res) => {
             console.log(res);
             localStorage.setItem("email", JSON.stringify(res.data));

@@ -3,8 +3,8 @@ import './style.css';
 import {useState} from 'react';
 import Swal from "sweetalert2";
 
-import { Form } from 'react-router-dom';
-import userService from '../api/userService';
+// import { Form } from 'react-router-dom';
+import {register} from '../api/userService';
 
 const Register = () => {
     const [Data, SetData] = useState({});
@@ -31,8 +31,7 @@ const Register = () => {
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-              userService
-                .register(Data)
+                register(Data)
                 .then((res) => {
                   console.log(res);
                 })
