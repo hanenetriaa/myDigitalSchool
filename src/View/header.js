@@ -47,7 +47,7 @@ function Header() {
       </div>
     
     <nav className="nav">
-      <NavLink exact activeClassName="active" to="/MDS" className="nav-link">
+      <NavLink exact activeClassName="active" to="/home" className="nav-link">
         Home
       </NavLink>
       <NavLink activeClassName="active" to="/profile" className="nav-link">

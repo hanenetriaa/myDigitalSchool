@@ -8,7 +8,6 @@ const Profile = () => {;
   const [nom, SetNom] = useState();
   const [prenom, SetPrenom] = useState();
   const [email, SetEmail] = useState();
-  const [password, SetPassword] = useState();
   const [tel, SetTel] = useState();
   const [Id, SetId] = useState();
   const [Data, SetData] = useState({});
@@ -22,8 +21,6 @@ const Profile = () => {;
         SetPrenom(res.data.data.prenom);
         SetEmail(res.data.data.email);
         SetTel(res.data.data.tel);
-        SetEmail(res.data.data.email);
-        SetPassword(res.data.data.password);
         SetId(res.data.data._id);
         // SetId(res.data.data._id);
       })

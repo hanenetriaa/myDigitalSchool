@@ -4,9 +4,11 @@ import {useState} from 'react';
 import Swal from "sweetalert2";
 import { Redirect, Link } from 'react-router-dom';
 import {login} from '../api/userService';
+import { useNavigate } from 'react-router-dom';
 
 const Connexion = () => {
   const [Data, SetData] = useState({});
+  const Navigate = useNavigate();
   const OnchangeHandler = (e) => {
     SetData({
       ...Data,
@@ -38,7 +40,7 @@ const Connexion = () => {
             console.log(err);
           });
         Swal.fire("Login!", "", "success");
-        <Redirect to="/home" />
+        <Navigate to="/home" replace={true} />
       } else if (result.isDenied) {
         Swal.fire("Changes are not saved", "", "info");
       }
@@ -60,7 +62,7 @@ const Connexion = () => {
         <button type ="submit">Connexion</button>
     </form>
  
- { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } }
+ <div>  <Link to={`./register`}> Inscrivez-vous  </Link></div> 
       
     </div>
     
