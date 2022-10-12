@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import {useState} from 'react';
 import Swal from "sweetalert2";
-import { Redirect, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import {login} from '../api/userService';
 import { useNavigate } from 'react-router-dom';
 
