@@ -27,7 +27,7 @@ const Register = () => {
             title: "Register",
             showDenyButton: true,
             confirmButtonText: "register",
-            denyButtonText: cancel,
+            denyButtonText: "cancel",
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
