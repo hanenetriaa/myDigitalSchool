@@ -3,10 +3,24 @@ import './style.css';
 import {useRef, useState, useEffect} from 'react';
 import AuthContext from '../services/logService';
 import axios from '../api/axios';
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import userService from '../api/userService';
 const LOGIN_URL='/auth';
 
 
+
 export default function Connexion() {
+const Login = () => {
+  const [Data, SetData] = useState({});
+  const OnchangeHandler = (e) => {
+    SetData({
+      ...Data,
+      [e.target.name]: e.target.value,
+    });
+    console.log(Data);
+  };
+
+
     const{setAuth}=useContext(AuthContext);
     const userRef= useState();
     const errRef= useState();
@@ -25,8 +39,12 @@ export default function Connexion() {
     useEffect(()=> {
       setErrMsg('');
   
-    }, [user,pwd])
+    }, [user,pwd]);
 
+
+
+
+  
     const handleSubmit = async (e) =>{
       e.preventDefault();
       try{
@@ -74,15 +92,15 @@ if(!err?.response){
     <form onSubmit={handleSubmit}>
         <label htmlFor='email'>
             <div>Mon mail</div>
-            <input type="email" id="email" ref={userRef} autoComplete="off" onChange={(e)=> setUser(e.target.value)} value={user} required/>
+            <input type="email" id="email" ref={userRef} autoComplete="off" onChange={OnchangeHandler} value={user} required/>
         </label>
         <label htmlFor='password' id="password">
             <div>Mon mail</div>
-            <input type="password" id="password" onChange={(e)=> setPwd(e.target.value)} value={pwd} required/>
+            <input type="password" id="password" onChange={OnchangeHandler} value={pwd} required/>
         </label>
     </form>
- <button>Connexion</button>
- {/* <div> <a href='#'> Inscrivez-vous</a></div> */}
+ <button type ="submit">Connexion</button>
+ { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> }
       
     </div>
       )}
