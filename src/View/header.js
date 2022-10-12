@@ -1,9 +1,38 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import {logout} from '../api/userService';
 
 function Header() {
+  const [Data, SetData] = useState({});
+  const { id } = useParams();
+  const onSubmitHandler= () => {
+    e.preventDefault();
+    Swal.fire({
+        title: "Tu es sûre ?",
+        showDenyButton: true,
+        confirmButtonText: "quitter",
+        denyButtonText: "rester",
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            logout(id)
+            .then((res) => {
+              console.log(res);
+            })
+            .catch((err) => {
+              Swal.fire({
+                title: "Error",
+                icon: "error",
+              });
+              console.log(err);
+            });
+          Swal.fire("Register!", "", "success");
+          <Redirect to="/" />
+        } 
+      });
+
   return (
-    <div className="header">
+    <div className="header" onSubmit={onSubmitHandler}>
       <div className="logo">
       <img 
       src="https://tocwebproject.fr/_nuxt/img/mydigitalschool-logo-white.f8fb2e3.png"
@@ -13,14 +42,18 @@ function Header() {
       </div>
     
     <nav className="nav">
-      <NavLink exact activeClassName="active" to="/" className="nav-link">
+      <NavLink exact activeClassName="active" to="/MDS" className="nav-link">
         Home
       </NavLink>
-      <NavLink activeClassName="active" to="/connexion" className="nav-link">
+      <NavLink activeClassName="active" to="/profile" className="nav-link">
         Mon profile
+      </NavLink>
+      <NavLink type ="submit" activeClassName="active" to="" className="nav-link">
+        Log out
       </NavLink>
     </nav>
     </div>
   );
+}
 }
 export default Header;

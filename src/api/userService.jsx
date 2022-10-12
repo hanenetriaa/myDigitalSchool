@@ -13,6 +13,12 @@ const login = (data) => {
   const getProfile = (id) => {
     return http.get(`/getProfile/${id}`);
   };
-  export {login, register, getProfile};
+
+  const logout = (id) => {
+    return http.get(`/logout/${id}`);
+  };
+  
+
+  export {login, register, getProfile, logout};
 
   
