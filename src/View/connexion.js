@@ -48,23 +48,25 @@ const Connexion = () => {
   };
   return (
         
-    <div className="section-body">
-    <h1>Connectez-vous</h1>
-    <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>
+    <div className='section-body bg-blue'>
+    <h1 className='title-formations deux'>Connectez-vous</h1>
+    <form onSubmit={handleSubmit} className="form">
+    <section className='img-connexion'></section>
+    <section className='form-input'>
+        <label className='form-input' htmlFor='email'>
             <div>Mon mail</div>
             <input type="email" id="email" name="email" autoComplete="off" onChange={OnchangeHandler}  placeholder="marie.espinosa@gmail.com" required/>
         </label>
-        <label htmlFor='password' id="password">
+        <label  className='form-input'htmlFor='password' id="password" >
             <div>Mon mot de passe</div>
             <input type="password" id="password" name="password" onChange={OnchangeHandler}  placeholder="Password" required/>
         </label>
         <button type ="submit">Connexion</button>
+        <div>  <Link to={`./register`}> Inscrivez-vous  </Link></div> 
+      </section>
     </form>
  
- <div>  <Link to={`./register`}> Inscrivez-vous  </Link></div> 
-      
-    </div>
+ </div>
     
   )};
 export default Connexion;
