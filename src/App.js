@@ -1,16 +1,25 @@
-import './App.css';
-import Connexion from './connexion';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import App from "./App";
+import Connexion from "./View/connexion";
+import Header from "./View//header";
+import Footer from "./View//footer";
+import MDS from "./View/MDS";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       <Connexion></Connexion>
-      </header>
-      
+const routing = (
+  <Router>
+    <div>
+      <Header />
+      <hr />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/connexion" component={Connexion} />
+      </Switch>
+      <Footer />
     </div>
-  );
-}
+  </Router>
+);
 
-export default App;
+ReactDOM.render(routing, document.getElementById("root"));
