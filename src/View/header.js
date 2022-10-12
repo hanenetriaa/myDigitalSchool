@@ -1,12 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import {logout} from '../api/userService';
+import Swal from "sweetalert2";
+import {useState} from 'react';
+import { useParams } from "react-router-dom";
 
 function Header() {
   const [Data, SetData] = useState({});
   const { id } = useParams();
   const onSubmitHandler= () => {
-    e.preventDefault();
+    id.preventDefault();
     Swal.fire({
         title: "Tu es sûre ?",
         showDenyButton: true,
@@ -29,7 +32,7 @@ function Header() {
           Swal.fire("Register!", "", "success");
           <Redirect to="/" />
         } 
-      });
+      })};
 
   return (
     <div className="header" onSubmit={onSubmitHandler}>
@@ -54,6 +57,6 @@ function Header() {
     </nav>
     </div>
   );
-}
+
 }
 export default Header;
