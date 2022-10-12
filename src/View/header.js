@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import {logout} from '../api/userService';
 import Swal from "sweetalert2";
 import {useState} from 'react';
@@ -8,6 +9,7 @@ import { useParams } from "react-router-dom";
 function Header() {
   const [Data, SetData] = useState({});
   const { id } = useParams();
+  const Navigate = useNavigate();
   const onSubmitHandler= () => {
     id.preventDefault();
     Swal.fire({
@@ -30,7 +32,7 @@ function Header() {
               console.log(err);
             });
           Swal.fire("Register!", "", "success");
-          <Redirect to="/" />
+          <Navigate to="/" replace={true} />
         } 
       })};
 
