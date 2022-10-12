@@ -74,8 +74,9 @@ const Register = () => {
                 <div>Mon numéro de téléphone</div>
                 <input type="tel" id="tel" name="tel" autoComplete="off" onChange={OnchangeHandler}  placeholder="numéro de téléphone" required/>
             </label>
+            <button type ="submit">Connexion</button>
         </form>
-     <button type ="submit">Connexion</button>
+     
      {/* { <div>  <Link to={`./register`}>Inscrivez-vous  </Link></div> } */}
           
         </div>
