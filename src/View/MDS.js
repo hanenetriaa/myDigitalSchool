@@ -6,7 +6,7 @@ function MDS() {
         <div className="section-body">
         <section className="home-title " >
       <h1>Bienvenue chez MydigitalSchool</h1>
-      <p>
+      <p className="text">
 MyDigitalSchool est une école web ouverte à toutes et à tous, aux initiés comme aux débutants. Notre objectif est d’ouvrir le monde du digital à tous les talents et tous les profils.</p>
       </section>
 
