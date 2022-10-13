@@ -21,7 +21,7 @@ function Header() {
         if (result.isConfirmed) {
             logout(id)
             .then((res) => {
-              navigate(`/getProfile/${res.data._id}`);
+              navigate(`/getProfile/${res.data.data._id}`);
               console.log(res);
             })
             .catch((err) => {
