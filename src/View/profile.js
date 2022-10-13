@@ -17,11 +17,11 @@ const Profile = () => {;
     getProfileById(id)
       .then((res) => {
         console.log(res);
-        SetNom(res.data.data.nom);
-        SetPrenom(res.data.data.prenom);
-        SetEmail(res.data.data.email);
-        SetTel(res.data.data.tel);
-        SetId(res.data.data._id);
+        SetNom(res.data.nom);
+        SetPrenom(res.data.prenom);
+        SetEmail(res.data.email);
+        SetTel(res.data.tel);
+        SetId(res.data._id);
         // SetId(res.data.data._id);
       })
       .catch((err) => {
