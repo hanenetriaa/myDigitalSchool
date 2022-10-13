@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Connexion = () => {
   const [Data, SetData] = useState({});
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const OnchangeHandler = (e) => {
     SetData({
       ...Data,
@@ -30,7 +30,8 @@ const Connexion = () => {
         login(Data)
           .then((res) => {
             console.log(res);
-            localStorage.setItem("email", JSON.stringify(res.data));
+            localStorage.setItem("email", JSON.stringify(res.data)); 
+            navigate("/home")
           })
           .catch((err) => {
             Swal.fire({
@@ -40,7 +41,7 @@ const Connexion = () => {
             console.log(err);
           });
         Swal.fire("Login!", "", "success");
-        <Navigate to="/home" replace={true} />
+       
       } else if (result.isDenied) {
         Swal.fire("Changes are not saved", "", "info");
       }
