@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 function Header() {
   const [Data, SetData] = useState({});
   const { id } = useParams();
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const onSubmitHandler= () => {
     id.preventDefault();
     Swal.fire({
@@ -18,10 +18,10 @@ function Header() {
         confirmButtonText: "quitter",
         denyButtonText: "rester",
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             logout(id)
             .then((res) => {
+              navigate(`/getProfile/${res.data._id}`);
               console.log(res);
             })
             .catch((err) => {
@@ -32,7 +32,6 @@ function Header() {
               console.log(err);
             });
           Swal.fire("Register!", "", "success");
-          <Navigate to="/" replace={true} />
         } 
       })};
 

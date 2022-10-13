@@ -31,7 +31,7 @@ const Connexion = () => {
           .then((res) => {
             console.log(res);
             localStorage.setItem("email", JSON.stringify(res.data)); 
-            navigate("/home")
+            navigate("/home");
           })
           .catch((err) => {
             Swal.fire({

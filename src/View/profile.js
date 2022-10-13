@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {getProfileById} from "../api/userService";
 
@@ -10,8 +9,6 @@ const Profile = () => {;
   const [email, SetEmail] = useState();
   const [tel, SetTel] = useState();
   const [Id, SetId] = useState();
-  const [Data, SetData] = useState({});
-  const navigate = useNavigate();
   const { id } = useParams();
   const getProfile = () => {
     getProfileById(id)
