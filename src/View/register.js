@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 // import { Form } from 'react-router-dom';
 import {register} from '../api/userService';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [Data, SetData] = useState({});
@@ -15,8 +16,10 @@ const Register = () => {
         });
         console.log(Data);
     };
+    const navigate = useNavigate();
     const onSubmitHandler= (e) => {
         e.preventDefault();
+  
         const formdata= new FormData();
         formdata.append("nom",Data.nom);
         formdata.append("prenom",Data.prenom);
@@ -34,6 +37,7 @@ const Register = () => {
                 register(Data)
                 .then((res) => {
                   console.log(res);
+                  navigate("/");
                 })
                 .catch((err) => {
                   Swal.fire({
